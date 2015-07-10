@@ -1,0 +1,4 @@
+zawaj_fiches_candidat:
+    resource: "@ZawajFichesCandidatBundle/Resources/config/routing.yml"
+    prefix:   /
+

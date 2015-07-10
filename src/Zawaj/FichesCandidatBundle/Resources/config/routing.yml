@@ -1,0 +1,3 @@
+zawaj_fiches_candidat_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: ZawajFichesCandidatBundle:Default:index }
