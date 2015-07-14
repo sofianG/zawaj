@@ -1,0 +1,214 @@
+<?php
+
+namespace Zawaj\FichesCandidatBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * CandidatFemme
+ *
+ * @ORM\Table()
+ * @ORM\Entity(repositoryClass="Zawaj\FichesCandidatBundle\Entity\CandidatFemmeRepository")
+ */
+class CandidatFemme
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="voile", type="boolean")
+     */
+    private $voile;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="datePortVoile", type="date")
+     */
+    private $datePortVoile;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="souhaitTravaille", type="boolean")
+     */
+    private $souhaitTravaille;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="tuteurCourant", type="boolean")
+     */
+    private $tuteurCourant;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="raisonTuteur", type="text")
+     */
+    private $raisonTuteur;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="commentaireTravail", type="text")
+     */
+    private $commentaireTravail;
+
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set voile
+     *
+     * @param boolean $voile
+     * @return CandidatFemme
+     */
+    public function setVoile($voile)
+    {
+        $this->voile = $voile;
+
+        return $this;
+    }
+
+    /**
+     * Get voile
+     *
+     * @return boolean 
+     */
+    public function getVoile()
+    {
+        return $this->voile;
+    }
+
+    /**
+     * Set datePortVoile
+     *
+     * @param \DateTime $datePortVoile
+     * @return CandidatFemme
+     */
+    public function setDatePortVoile($datePortVoile)
+    {
+        $this->datePortVoile = $datePortVoile;
+
+        return $this;
+    }
+
+    /**
+     * Get datePortVoile
+     *
+     * @return \DateTime 
+     */
+    public function getDatePortVoile()
+    {
+        return $this->datePortVoile;
+    }
+
+    /**
+     * Set souhaitTravaille
+     *
+     * @param boolean $souhaitTravaille
+     * @return CandidatFemme
+     */
+    public function setSouhaitTravaille($souhaitTravaille)
+    {
+        $this->souhaitTravaille = $souhaitTravaille;
+
+        return $this;
+    }
+
+    /**
+     * Get souhaitTravaille
+     *
+     * @return boolean 
+     */
+    public function getSouhaitTravaille()
+    {
+        return $this->souhaitTravaille;
+    }
+
+    /**
+     * Set tuteurCourant
+     *
+     * @param boolean $tuteurCourant
+     * @return CandidatFemme
+     */
+    public function setTuteurCourant($tuteurCourant)
+    {
+        $this->tuteurCourant = $tuteurCourant;
+
+        return $this;
+    }
+
+    /**
+     * Get tuteurCourant
+     *
+     * @return boolean 
+     */
+    public function getTuteurCourant()
+    {
+        return $this->tuteurCourant;
+    }
+
+    /**
+     * Set raisonTuteur
+     *
+     * @param string $raisonTuteur
+     * @return CandidatFemme
+     */
+    public function setRaisonTuteur($raisonTuteur)
+    {
+        $this->raisonTuteur = $raisonTuteur;
+
+        return $this;
+    }
+
+    /**
+     * Get raisonTuteur
+     *
+     * @return string 
+     */
+    public function getRaisonTuteur()
+    {
+        return $this->raisonTuteur;
+    }
+
+    /**
+     * Set commentaireTravail
+     *
+     * @param string $commentaireTravail
+     * @return CandidatFemme
+     */
+    public function setCommentaireTravail($commentaireTravail)
+    {
+        $this->commentaireTravail = $commentaireTravail;
+
+        return $this;
+    }
+
+    /**
+     * Get commentaireTravail
+     *
+     * @return string 
+     */
+    public function getCommentaireTravail()
+    {
+        return $this->commentaireTravail;
+    }
+}

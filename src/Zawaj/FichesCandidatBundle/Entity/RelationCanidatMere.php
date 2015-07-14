@@ -1,0 +1,64 @@
+<?php
+
+namespace Zawaj\FichesCandidatBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * RelationCanidatMere
+ *
+ * @ORM\Table()
+ * @ORM\Entity(repositoryClass="Zawaj\FichesCandidatBundle\Entity\RelationCanidatMereRepository")
+ */
+class RelationCanidatMere
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="typeRelationMere", type="string", length=255)
+     */
+    private $typeRelationMere;
+
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set typeRelationMere
+     *
+     * @param string $typeRelationMere
+     * @return RelationCanidatMere
+     */
+    public function setTypeRelationMere($typeRelationMere)
+    {
+        $this->typeRelationMere = $typeRelationMere;
+
+        return $this;
+    }
+
+    /**
+     * Get typeRelationMere
+     *
+     * @return string 
+     */
+    public function getTypeRelationMere()
+    {
+        return $this->typeRelationMere;
+    }
+}
