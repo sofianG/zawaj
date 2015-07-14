@@ -1,19 +1,45 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{% block title %}Zawaj{% endblock %}</title>
+        {% block stylesheets %}
+            {% stylesheets
+            'bootstrap/css/bootstrap.min.css'
+            'css/general/general.css'
+            'font-awesome/css/font-awesome.min.css'
+            filter='cssrewrite' %}
+            <link rel="stylesheet" href="{{ asset_url }}" />
+            <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.7/css/jquery.dataTables.css">
+            {% endstylesheets %}
+        {% endblock %}
+    </head>
+    <body>
+    <div class="container-fluid">
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="{{ path('zawaj_fiches_candidat_accueil') }}">
+                        <img alt="Zawaj" src="{{ asset('images/general/logo.png') }}"></img>
+                    </a>
+                </div>
 
-    <title>{% block title %}Zawaj{% endblock %}</title>
+                <ul class="nav navbar-nav">
+                    <li><a class="btn btn-default" href="{{ path('zawaj_fiches_candidat_accueil') }}"><i class="fa fa-home"></i> Accueil</a></li>
+                    <li><a class="btn btn-default" href="{{ path('zawaj_fiches_candidat_fiches_recus', {'typeSexe': 'Homme', 'id': 0}) }}"><i class="fa fa-cogs"></i> Fiches reçus</a></li>
+                    <li><a class="btn btn-default" href="{{ path('zawaj_fiches_candidat_fiches_inscrits', {'typeSexe': 'Homme', 'id': 0}) }}"><i class="fa fa-cogs"></i> Fiches inscrits</a></li>
+                    <li><a class="btn btn-default" href="{{ path('zawaj_fiches_candidat_fiches_archives', {'typeSexe': 'Homme', 'id': 0}) }}"><i class="fa fa-cogs"></i> Fiches archivées</a></li>
+                </ul>
 
-    {% block stylesheets %}
+                <div id="headerUser" class="text-center"><p>Partie info utilisateur</p></div>
+            </div>
+        </nav>
 
-    {% endblock %}
-
-</head>
-
-<body>
-test
-
-</body>
+        <div id="contenu" class="container">
+            {% block body %}
+            {% endblock %}
+        </div>
+    </div>
+    </body>
 </html>

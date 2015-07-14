@@ -1,3 +1,26 @@
 zawaj_fiches_candidat_accueil:
     path:     /Accueil
     defaults: { _controller: ZawajFichesCandidatBundle:FichesCandidat:index }
+
+zawaj_fiches_candidat_fiches_recus:
+    path:     /FichesRecus/{typeSexe}/{id}
+    defaults: { _controller: ZawajFichesCandidatBundle:FichesCandidat:fichesRecus, id: 0}
+    requirements:
+        typeSexe:   Homme|Femme
+        id :   "[0-9]*"
+
+zawaj_fiches_candidat_fiches_inscrits:
+    path:    /FichesInscrits/{typeSexe}/{id}
+    defaults: {_controller: ZawajFichesCandidatBundle:FichesCandidat:fichesInscrits, id: 0}
+    requirements:
+        typeSexe:   Homme|Femme
+        id : "[0-9]*"
+
+zawaj_fiches_candidat_fiches_archives:
+    path:    /FichesArchives/{typeSexe}/{id}
+    defaults: {_controller: ZawajFichesCandidatBundle:FichesCandidat:fichesArchives, id: 0}
+    requirements:
+        typeSexe:   Homme|Femme
+        id: "[0-9]*"
+
+

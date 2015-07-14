@@ -1,5 +1,15 @@
 {% extends "::layout.html.twig" %}
 
+{% block stylesheets %}
+    {{ parent() }}
+    {% stylesheets '@ZawajFichesCandidatBundle/Resources/public/css/fichesCandidat.css' filter='cssrewrite' %}
+    <link rel="stylesheet" href="{{ asset_url }}" xmlns="http://www.w3.org/1999/html"
+          xmlns="http://www.w3.org/1999/html"/>
+    {% endstylesheets %}
+{% endblock %}
+
     {% block body %}
-        Test 2
+        <div class="page-header">
+            <h2>ACCUEIL</h2>
+        </div>
     {% endblock %}
