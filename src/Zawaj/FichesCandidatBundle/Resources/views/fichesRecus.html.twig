@@ -1,0 +1,22 @@
+{% extends "::layout.html.twig" %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {% stylesheets '@ZawajFichesCandidatBundle/Resources/public/css/fichesCandidat.css' filter='cssrewrite' %}
+    <link rel="stylesheet" href="{{ asset_url }}" xmlns="http://www.w3.org/1999/html"
+          xmlns="http://www.w3.org/1999/html"/>
+    {% endstylesheets %}
+{% endblock %}
+
+    {% block body %}
+        <div class="page-header">
+            <h2>FICHES RECUS <small> HOMME/FEMME</small></h2>
+            {#Choix visualisation fiches hommes ou femmes#}
+            <div class="btnSexe">
+                <div class="btn-group" role="group" aria-label="choixSexe">
+                    <a href="{{ path('zawaj_fiches_candidat_fiches_recus', {'typeSexe': 'Homme' }) }}"><button type="button" class="btn btn-primary" {% if typeSexe == "Homme" %}btn-success{% endif %}">Hommes <span class="badge">2</span></button></a>
+                    <a href="{{ path('zawaj_fiches_candidat_fiches_recus', {'typeSexe': 'Femme' }) }}"><button type="button" class="btn btn-primary" {% if typeSexe == "Femme" %}btn-success{% endif %}">Femmes <span class="badge">1</span></button></a>
+                </div>
+            </div>
+        </div>
+    {% endblock %}
