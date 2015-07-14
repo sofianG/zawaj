@@ -66,27 +66,4 @@ class CP
     {
         return $this->libelleCP;
     }
-
-    /**
-     * Set ville
-     *
-     * @param \Zawaj\FichesCandidatBundle\Entity\Ville $ville
-     * @return CP
-     */
-    public function setVille(\Zawaj\FichesCandidatBundle\Entity\Ville $ville)
-    {
-        $this->ville = $ville;
-
-        return $this;
-    }
-
-    /**
-     * Get ville
-     *
-     * @return \Zawaj\FichesCandidatBundle\Entity\Ville 
-     */
-    public function getVille()
-    {
-        return $this->ville;
-    }
 }

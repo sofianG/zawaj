@@ -5,12 +5,12 @@ namespace Zawaj\FichesCandidatBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Pere
+ * Mere
  *
  * @ORM\Table()
- * @ORM\Entity(repositoryClass="Zawaj\FichesCandidatBundle\Entity\PereRepository")
+ * @ORM\Entity(repositoryClass="Zawaj\FichesCandidatBundle\Entity\MereRepository")
  */
-class Pere
+class Mere
 {
     /**
      * @var integer
@@ -38,22 +38,21 @@ class Pere
     /**
      * @var boolean
      *
-     * @ORM\Column(name="pratiquant", type="boolean")
+     * @ORM\Column(name="pratiquante", type="boolean")
      */
-    private $pratiquant;
+    private $pratiquante;
 
     /**
      * @ORM\ManyToOne(targetEntity="Zawaj\FichesCandidatBundle\Entity\Pays")
      * @ORM\JoinColumn(nullable=false)
      */
-    private $paysOriginePere;
+    private $paysOrigineMere;
 
     /**
      * @ORM\ManyToOne(targetEntity="Zawaj\FichesCandidatBundle\Entity\Pays")
      * @ORM\JoinColumn(nullable=false)
      */
-    private $villeHabitationPere;
-
+    private $villeHabitationMere;
 
     /**
      * Get id
@@ -69,7 +68,7 @@ class Pere
      * Set nom
      *
      * @param string $nom
-     * @return Pere
+     * @return Mere
      */
     public function setNom($nom)
     {
@@ -92,7 +91,7 @@ class Pere
      * Set prenom
      *
      * @param string $prenom
-     * @return Pere
+     * @return Mere
      */
     public function setPrenom($prenom)
     {
@@ -112,71 +111,25 @@ class Pere
     }
 
     /**
-     * Set pratiquant
+     * Set pratiquante
      *
-     * @param boolean $pratiquant
-     * @return Pere
+     * @param boolean $pratiquante
+     * @return Mere
      */
-    public function setPratiquant($pratiquant)
+    public function setPratiquante($pratiquante)
     {
-        $this->pratiquant = $pratiquant;
+        $this->pratiquante = $pratiquante;
 
         return $this;
     }
 
     /**
-     * Get pratiquant
+     * Get pratiquante
      *
      * @return boolean 
      */
-    public function getPratiquant()
+    public function getPratiquante()
     {
-        return $this->pratiquant;
-    }
-
-    /**
-     * Set paysOriginePere
-     *
-     * @param \Zawaj\FichesCandidatBundle\Entity\Pays $paysOriginePere
-     * @return Pere
-     */
-    public function setPaysOriginePere(\Zawaj\FichesCandidatBundle\Entity\Pays $paysOriginePere)
-    {
-        $this->paysOriginePere = $paysOriginePere;
-
-        return $this;
-    }
-
-    /**
-     * Get paysOriginePere
-     *
-     * @return \Zawaj\FichesCandidatBundle\Entity\Pays 
-     */
-    public function getPaysOriginePere()
-    {
-        return $this->paysOriginePere;
-    }
-
-    /**
-     * Set villeHabitationPere
-     *
-     * @param \Zawaj\FichesCandidatBundle\Entity\Pays $villeHabitationPere
-     * @return Pere
-     */
-    public function setVilleHabitationPere(\Zawaj\FichesCandidatBundle\Entity\Pays $villeHabitationPere)
-    {
-        $this->villeHabitationPere = $villeHabitationPere;
-
-        return $this;
-    }
-
-    /**
-     * Get villeHabitationPere
-     *
-     * @return \Zawaj\FichesCandidatBundle\Entity\Pays 
-     */
-    public function getVilleHabitationPere()
-    {
-        return $this->villeHabitationPere;
+        return $this->pratiquante;
     }
 }

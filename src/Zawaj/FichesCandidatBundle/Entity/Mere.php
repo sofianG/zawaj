@@ -42,6 +42,17 @@ class Mere
      */
     private $pratiquante;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="Zawaj\FichesCandidatBundle\Entity\Pays")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $paysOrigineMere;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Zawaj\FichesCandidatBundle\Entity\Pays")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $villeHabitationMere;
 
     /**
      * Get id
@@ -120,5 +131,51 @@ class Mere
     public function getPratiquante()
     {
         return $this->pratiquante;
+    }
+
+    /**
+     * Set paysOrigineMere
+     *
+     * @param \Zawaj\FichesCandidatBundle\Entity\Pays $paysOrigineMere
+     * @return Mere
+     */
+    public function setPaysOrigineMere(\Zawaj\FichesCandidatBundle\Entity\Pays $paysOrigineMere)
+    {
+        $this->paysOrigineMere = $paysOrigineMere;
+
+        return $this;
+    }
+
+    /**
+     * Get paysOrigineMere
+     *
+     * @return \Zawaj\FichesCandidatBundle\Entity\Pays 
+     */
+    public function getPaysOrigineMere()
+    {
+        return $this->paysOrigineMere;
+    }
+
+    /**
+     * Set villeHabitationMere
+     *
+     * @param \Zawaj\FichesCandidatBundle\Entity\Pays $villeHabitationMere
+     * @return Mere
+     */
+    public function setVilleHabitationMere(\Zawaj\FichesCandidatBundle\Entity\Pays $villeHabitationMere)
+    {
+        $this->villeHabitationMere = $villeHabitationMere;
+
+        return $this;
+    }
+
+    /**
+     * Get villeHabitationMere
+     *
+     * @return \Zawaj\FichesCandidatBundle\Entity\Pays 
+     */
+    public function getVilleHabitationMere()
+    {
+        return $this->villeHabitationMere;
     }
 }

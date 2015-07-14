@@ -54,7 +54,6 @@ class Pere
      */
     private $villeHabitationPere;
 
-
     /**
      * Get id
      *
@@ -132,51 +131,5 @@ class Pere
     public function getPratiquant()
     {
         return $this->pratiquant;
-    }
-
-    /**
-     * Set paysOriginePere
-     *
-     * @param \Zawaj\FichesCandidatBundle\Entity\Pays $paysOriginePere
-     * @return Pere
-     */
-    public function setPaysOriginePere(\Zawaj\FichesCandidatBundle\Entity\Pays $paysOriginePere)
-    {
-        $this->paysOriginePere = $paysOriginePere;
-
-        return $this;
-    }
-
-    /**
-     * Get paysOriginePere
-     *
-     * @return \Zawaj\FichesCandidatBundle\Entity\Pays 
-     */
-    public function getPaysOriginePere()
-    {
-        return $this->paysOriginePere;
-    }
-
-    /**
-     * Set villeHabitationPere
-     *
-     * @param \Zawaj\FichesCandidatBundle\Entity\Pays $villeHabitationPere
-     * @return Pere
-     */
-    public function setVilleHabitationPere(\Zawaj\FichesCandidatBundle\Entity\Pays $villeHabitationPere)
-    {
-        $this->villeHabitationPere = $villeHabitationPere;
-
-        return $this;
-    }
-
-    /**
-     * Get villeHabitationPere
-     *
-     * @return \Zawaj\FichesCandidatBundle\Entity\Pays 
-     */
-    public function getVilleHabitationPere()
-    {
-        return $this->villeHabitationPere;
     }
 }

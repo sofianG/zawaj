@@ -7,13 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * ProfilRecherche
  *
- * @ORM\Entity()
- * @ORM\InheritanceType("SINGLE_TABLE")
- * @ORM\DiscriminatorColumn(name="discr", type="string")
- * @ORM\DiscriminatorMap({
- *      "profilRechercheHomme"      = "ProfilRechercheHomme",
- *      "profilRechercheFemme"   = "ProfilRechercheFemme",
- * })
+ * @ORM\Table()
  * @ORM\Entity(repositoryClass="Zawaj\FichesCandidatBundle\Entity\ProfilRechercheRepository")
  */
 class ProfilRecherche
@@ -352,91 +346,5 @@ class ProfilRecherche
     public function getTailleMax()
     {
         return $this->tailleMax;
-    }
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->villeHabRecherche = new \Doctrine\Common\Collections\ArrayCollection();
-    }
-
-    /**
-     * Set exigeancePoids
-     *
-     * @param \Zawaj\FichesCandidatBundle\Entity\ExigeancePoids $exigeancePoids
-     * @return ProfilRecherche
-     */
-    public function setExigeancePoids(\Zawaj\FichesCandidatBundle\Entity\ExigeancePoids $exigeancePoids)
-    {
-        $this->exigeancePoids = $exigeancePoids;
-
-        return $this;
-    }
-
-    /**
-     * Get exigeancePoids
-     *
-     * @return \Zawaj\FichesCandidatBundle\Entity\ExigeancePoids 
-     */
-    public function getExigeancePoids()
-    {
-        return $this->exigeancePoids;
-    }
-
-    /**
-     * Set teint
-     *
-     * @param \Zawaj\FichesCandidatBundle\Entity\Teint $teint
-     * @return ProfilRecherche
-     */
-    public function setTeint(\Zawaj\FichesCandidatBundle\Entity\Teint $teint)
-    {
-        $this->teint = $teint;
-
-        return $this;
-    }
-
-    /**
-     * Get teint
-     *
-     * @return \Zawaj\FichesCandidatBundle\Entity\Teint 
-     */
-    public function getTeint()
-    {
-        return $this->teint;
-    }
-
-    /**
-     * Add villeHabRecherche
-     *
-     * @param \Zawaj\FichesCandidatBundle\Entity\CP $villeHabRecherche
-     * @return ProfilRecherche
-     */
-    public function addVilleHabRecherche(\Zawaj\FichesCandidatBundle\Entity\CP $villeHabRecherche)
-    {
-        $this->villeHabRecherche[] = $villeHabRecherche;
-
-        return $this;
-    }
-
-    /**
-     * Remove villeHabRecherche
-     *
-     * @param \Zawaj\FichesCandidatBundle\Entity\CP $villeHabRecherche
-     */
-    public function removeVilleHabRecherche(\Zawaj\FichesCandidatBundle\Entity\CP $villeHabRecherche)
-    {
-        $this->villeHabRecherche->removeElement($villeHabRecherche);
-    }
-
-    /**
-     * Get villeHabRecherche
-     *
-     * @return \Doctrine\Common\Collections\Collection 
-     */
-    public function getVilleHabRecherche()
-    {
-        return $this->villeHabRecherche;
     }
 }

@@ -2,13 +2,17 @@
 
 namespace Zawaj\FichesCandidatBundle\Controller;
 
+use Zawaj\FichesCandidatBundle\Entity\Ville;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Request;
+
 
 class FichesCandidatController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('ZawajFichesCandidatBundle::index.html.twig');
+        return $this->render('ZawajFichesCandidatBundle::index.html.twig', array(
+        ));
     }
 
 

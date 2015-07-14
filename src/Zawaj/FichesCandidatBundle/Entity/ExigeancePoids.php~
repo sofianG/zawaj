@@ -5,12 +5,12 @@ namespace Zawaj\FichesCandidatBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Television
+ * ExigeancePoids
  *
  * @ORM\Table()
- * @ORM\Entity(repositoryClass="Zawaj\FichesCandidatBundle\Entity\TelevisionRepository")
+ * @ORM\Entity(repositoryClass="Zawaj\FichesCandidatBundle\Entity\ExigeancePoidsRepository")
  */
-class Television
+class ExigeancePoids
 {
     /**
      * @var integer
@@ -24,9 +24,9 @@ class Television
     /**
      * @var string
      *
-     * @ORM\Column(name="libelleTelevision", type="string", length=255)
+     * @ORM\Column(name="poids", type="string", length=255)
      */
-    private $libelleTelevision;
+    private $poids;
 
 
     /**
@@ -40,25 +40,25 @@ class Television
     }
 
     /**
-     * Set libelleTelevision
+     * Set poids
      *
-     * @param string $libelleTelevision
-     * @return Teevision
+     * @param string $poids
+     * @return ExigeancePoids
      */
-    public function setLibelleTelevision($libelleTelevision)
+    public function setPoids($poids)
     {
-        $this->libelleTelevision = $libelleTelevision;
+        $this->poids = $poids;
 
         return $this;
     }
 
     /**
-     * Get libelleTelevision
+     * Get poids
      *
      * @return string 
      */
-    public function getLibelleTelevision()
+    public function getPoids()
     {
-        return $this->libelleTelevision;
+        return $this->poids;
     }
 }

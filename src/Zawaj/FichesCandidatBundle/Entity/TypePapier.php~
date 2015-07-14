@@ -66,27 +66,4 @@ class TypePapier
     {
         return $this->libelleTypePapier;
     }
-
-    /**
-     * Set typePapierPays
-     *
-     * @param \Zawaj\FichesCandidatBundle\Entity\Pays $typePapierPays
-     * @return TypePapier
-     */
-    public function setTypePapierPays(\Zawaj\FichesCandidatBundle\Entity\Pays $typePapierPays)
-    {
-        $this->typePapierPays = $typePapierPays;
-
-        return $this;
-    }
-
-    /**
-     * Get typePapierPays
-     *
-     * @return \Zawaj\FichesCandidatBundle\Entity\Pays 
-     */
-    public function getTypePapierPays()
-    {
-        return $this->typePapierPays;
-    }
 }
