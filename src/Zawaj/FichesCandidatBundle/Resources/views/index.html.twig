@@ -9,8 +9,83 @@
 {% endblock %}
 
     {% block body %}
-        <div class="page-header">
-            <h2>ACCUEIL</h2>
+
+        <div class="layout-ruban">
+            <div id="fond">
+                <div class="ruban">
+                    <h2>ACCUEIL - <span class="db">Tableau de bord</span></h2>
+                </div>
+                <div class="ruban_gauche"></div>
+                <div class="ruban_droit"></div>
+            </div>
         </div>
-        <p>En cours de developpment ... </p>
+
+        <div class="layout-dashboard">
+            <div class="contenuDB">
+
+                <div class="bloc1">
+                    <div class="titreBloc">
+                        <h3>GENERAL</h3>
+                    </div>
+
+                    <div class="contenuItem">
+                        <div class="layout-item">
+                            <img class="icone-gen" alt="Zawaj" src="{{ asset('images/general/profil-icone.png') }}"></img>
+                            <span class="badge">4</span>
+
+                            <div class="item-db">
+                                <p>Nouveaux profils correspondants</p>
+                            </div>
+                        </div>
+
+
+                        <div class="layout-item">
+                            <img class="icone-gen" alt="Zawaj" src="{{ asset('images/general/profil-icone.png') }}"></img>
+                            <span class="badge">4</span>
+                            <div class="item-db">
+                                <p>Nombre de rencontres a programmer</p>
+                            </div>
+                        </div>
+                        <div class="cb"></div>
+
+                    </div>
+
+                </div>
+
+                <div class="bloc1">
+                    <div class="titreBloc">
+                        <h3>GENERAL</h3>
+                    </div>
+
+                    <div class="contenuItem">
+                        <div class="layout-item">
+                            <img class="icone-gen" alt="Zawaj" src="{{ asset('images/general/profil-icone.png') }}"></img>
+                            <span class="badge">4</span>
+
+                            <div class="item-db">
+                                <p>Nouveaux profils correspondants</p>
+                            </div>
+                        </div>
+
+
+                        <div class="layout-item">
+                            <img class="icone-gen" alt="Zawaj" src="{{ asset('images/general/profil-icone.png') }}"></img>
+                            <span class="badge">4</span>
+                            <div class="item-db">
+                                <p>Nombre de rencontres a programmer</p>
+                            </div>
+                        </div>
+                        <div class="cb"></div>
+
+                    </div>
+
+                </div>
+
+
+
+
+                <div class="cb"></div>
+            </div>
+        </div>
+
     {% endblock %}

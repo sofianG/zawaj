@@ -16,32 +16,46 @@
         {% endblock %}
     </head>
     <body>
+
+
     <div class="container-fluid">
-        <nav class="navbar navbar-inverse">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="{{ path('zawaj_fiches_candidat_accueil') }}">
-                        <img alt="Zawaj" src="{{ asset('images/general/logo.png') }}"></img>
-                    </a>
-                </div>
-
-                <ul class="nav navbar-nav">
-                    <li><a class="btn btn-default" href="{{ path('zawaj_fiches_candidat_accueil') }}"><i class="fa fa-home"></i> Accueil</a></li>
-                    <li><a class="btn btn-default" href="{{ path('zawaj_fiches_candidat_fiches_recus', {'typeSexe': 'Homme', 'id': 0}) }}"><i class="fa fa-cogs"></i> Fiches reçus</a></li>
-                    <li><a class="btn btn-default" href="{{ path('zawaj_fiches_candidat_fiches_inscrits', {'typeSexe': 'Homme', 'id': 0}) }}"><i class="fa fa-cogs"></i> Fiches inscrits</a></li>
-                    <li><a class="btn btn-default" href="{{ path('zawaj_fiches_candidat_fiches_archives', {'typeSexe': 'Homme', 'id': 0}) }}"><i class="fa fa-cogs"></i> Rencontres</a></li>
-                    <li><a class="btn btn-default" href="{{ path('zawaj_fiches_candidat_fiches_archives', {'typeSexe': 'Homme', 'id': 0}) }}"><i class="fa fa-cogs"></i> Fiches archivées</a></li>
-                    <li><a class="btn btn-default" href="{{ path('zawaj_fiches_candidat_fiches_archives', {'typeSexe': 'Homme', 'id': 0}) }}"><i class="fa fa-cogs"></i> Statistique</a></li>
-                </ul>
-
-                <div id="headerUser" class="text-center"><p>Info utilisateur</p></div>
+        
+        
+        <header>
+        <div id="cssmenu">
+            <div class="logo">
+                <a>
+                    <img alt="Zawaj" src="{{ asset('images/general/logo.png') }}"></img>
+                </a>
             </div>
-        </nav>
-
+            <ul>
+                <li class='active'><a  href="{{ path('zawaj_fiches_candidat_accueil') }}"><span>ACCUEIL</span></a></li>
+                <li><a  href="{{ path('zawaj_fiches_candidat_fiches_recus', {'typeSexe': 'Homme', 'id': 0}) }}"><span>FICHES RECUES</span></a></li>
+                <li><a  href="{{ path('zawaj_fiches_candidat_fiches_inscrits', {'typeSexe': 'Homme', 'id': 0}) }}"><span>FICHES INSCRITS</span></a></li>
+                <li><a  href="{{ path('zawaj_fiches_candidat_fiches_archives', {'typeSexe': 'Homme', 'id': 0}) }}"><span>RENCONTRES</span></a></li>
+                <li><a  href="{{ path('zawaj_fiches_candidat_fiches_archives', {'typeSexe': 'Homme', 'id': 0}) }}"><span>FICHES ARCHIVEES</span></a></li>
+                <li class='last'><a  href="{{ path('zawaj_fiches_candidat_fiches_archives', {'typeSexe': 'Homme', 'id': 0}) }}"><span>STATISTIQUE</span></a></li>
+            </ul
+        </div>
+            <div class="sous-menu"></div>
+        </header>
+        
         <div id="contenu" class="container">
             {% block body %}
+
             {% endblock %}
         </div>
     </div>
+    {% block javascripts %}
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+        {#<script type="text/javascript" charset="utf8" src="//code.jquery.com/jquery-1.10.2.min.js"></script>#}
+        <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.7/js/jquery.dataTables.js"></script>
+    {% endblock %}
     </body>
+
+
+
 </html>
+
+
